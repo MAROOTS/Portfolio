@@ -1,0 +1,39 @@
+.testimonial_container{
+    width: 750px;
+}
+.testimonial_card{
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+    
+
+}
+.testimonial_img{
+    width: 60px;
+    border-radius: 3rem;
+    margin-bottom: 1rem;
+}
+.testimonial_name{
+    font-size: 0.983rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+.testimonial_description{
+    font-size: 0.813rem;
+}
+.swiper-pagination-bullet{
+    background-color: hsl(0, 0%,46%) !important;
+}
+.swiper-pagination-bullet-active{
+    background-color: hsl(0, 0%,20%) !important;
+}
+@media screen  and (max-width: 992px){
+    .testimonial_container{
+        width: initial;
+    }
+    .testimonial_card{
+        padding: 1.25rem 1.5rem;
+    }
+}

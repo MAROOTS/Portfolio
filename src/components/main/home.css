@@ -1,0 +1,114 @@
+.home_container {
+  row-gap: 7rem;
+}
+.home_content {
+  grid-template-columns: 116px repeat(2, 1fr);
+  padding-top: 5.5rem;
+  column-gap: 2rem;
+  align-items: center;
+}
+.home_social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+.home_social-icon {
+  font-size: 1.25rem;
+  color: hsl(0, 0, 0, 20%);
+}
+.home_title {
+  font-size: 3.5rem;
+  margin-bottom: 0.25rem;
+}
+.home_subtitle {
+  position: relative;
+  font-size: 1.25rem;
+  padding-left: 5.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.home_subtitle::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background-color: hsl(0, 0, 20%);
+  left: 0;
+  top: 1rem;
+}
+.home_description {
+  max-width: 400px;
+  margin-bottom: 3rem;
+}
+.home_img {
+  background: url(../../assets/img1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+  order: 1;
+  justify-self: center;
+  animation: img1_animate 8s ease-in-out infinite 1s;
+}
+
+@keyframes img1_animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .home_content {
+    grid-template-columns: 100px repeat(2, 1fr);
+    column-gap: 1.25rem;
+  }
+  .home_subtitle {
+    padding-left: 3.75rem;
+    margin-bottom: 1rem;
+  }
+  .home_subtitle::before {
+    width: 42px;
+    top: 0.8rem;
+  }
+  .home_description {
+    max-width: initial;
+    margin-bottom: 2.5rem;
+  }
+  .home_img {
+    width: 250px;
+    height: 250px;
+    box-shadow: inset 0 0 0 8px rgb(255 255 255 / 30%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .home_content {
+    grid-template-columns: 0.5fr 3fr;
+    padding-top: 3.5rem;
+  }
+  .home_img {
+    order: initial;
+    justify-self: initial;
+  }
+  .home_data {
+    grid-column: 1/3;
+  }
+  .home_img {
+    box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .home_img{
+    width: 180px;
+    height: 180px;
+  }  
+}

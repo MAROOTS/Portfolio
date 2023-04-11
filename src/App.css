@@ -1,0 +1,139 @@
+:root {
+  --header-height: 3rem;
+  /* .5rem=8px | 1rem=16px */
+  --big-font-size: 3.5rem;
+  --container-color: #fff;
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+@media screen and(max-width:992px) {
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813;
+    --smaller-font-size: 0.75rem;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  bottom: none;
+  outline: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.section {
+  padding: 6rem 0 2rem;
+}
+.section_title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+.section_subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+}
+.section_title,
+.section_subtitle {
+  text-align: center;
+}
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.button {
+  display: inline-block;
+  color: var(--container-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}
+.button:hover {
+  background-color: var(--title-color-dark);
+}
+.button_icon {
+  margin-left: var(--mb-0-5);
+}
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+.button{
+padding: 1rem 1.75rem; 
+}
+}
+@media screen and (max-width: 768px) {
+  body{
+    margin: 0 0 3rem 0;
+  }
+.section{
+  padding: 2rem 0 4rem;
+}
+.section_subtitle{
+  margin-bottom: 3rem;
+}
+}
+@media screen and (max-width: 350px) {
+:root{
+--big-font-size:2.25rem;
+}
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
